@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-open-sans: 'Open Sans', sans-serif;
+  --orange: #FF9900;
+  --gray: #7D7987;
+  --grey: #ECECF2
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-open-sans);
+  font-size: 1.6rem;
+
+  text-align: center;
+
+  margin: 0;
+}
+
+#hero {
+  max-width: 59.2rem;
+  margin: 0 auto 3rem;
+}
+
+#hero img {
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-family: var(--font-inter);
+  font-size: 4.9rem;
+  line-height: 5.6rem;
+  font-weight: normal;
+
+  margin-bottom: 3rem;
+}
+
+h1 > span {
+  font-weight: bold;
+}
+
+span, a {
+  color: var(--orange);
+}
+
+p, #footer {
+  color: var(--gray);
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+
+p:nth-child(odd) {
+  margin-bottom: 3rem;
+}
+
+#footer {
+  margin-bottom: 3rem;
+}
+
+#footer a + a{
+  margin-left: 2.8rem;
+}
+
+#line {
+  max-width: 56.8rem;
+  height: 0;
+  border: .1rem var(--grey) solid;
+  margin: 0 auto .8rem;
+}
+
+#balls {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+@media(max-width: 60rem) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #balls {
+    width: 5rem;
+  }
+  
+}

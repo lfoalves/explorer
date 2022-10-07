@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentoria</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="https://img.icons8.com/emoji/2x/bullseye.png" type="image/x-icon">
+  <!-- style -->
+  <link rel="stylesheet" href="./styles/styles.css">
+  <!-- fonts staatliches -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <!-- fonts poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form">
+      <header>
+        <h1>Mentoria</h1>
+        <p>Preencha o formulário abaixo para agendar a mentoria</p>
+      </header>
+
+      <form id="my-form">
+        <fieldset>
+          <legend>Informações pessoais</legend>
+
+          <div class="columns">
+            <div class="flex">
+              <div class="input-wrapper">
+                <label for="cNome">Nome</label>
+                <input type="text" name="tNome" id="cNome" title="Somente letras" />
+              </div>
+              <div class="input-wrapper">
+                <label for="cSobrenome">Sobrenome</label>
+                <input type="text" name="tSobrenome" id="cSobrenome" />
+              </div>
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="cEmail">Email<span>(digite um email válido)</span></label>
+            <input type="email" name="tEmail" id="cEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="example: usuario@email.com" />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="cSenha">Senha<span>(mínimo de 6 caracteres)</span></label>
+            <input type="password" name="tSenha" id="cSenha" minlength="6" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Informações do mentor</legend>
+
+          <div class="input-wrapper row">
+            <label for="cMentor">Nome do seu mentor<span>(só o primeiro nome)</span></label>
+            <input type="text" name="tMentor" id="cMentor" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Seus horários disponíveis</legend>
+
+          
+          <div class="columns">
+            <h2>Primeira mentoria</h2>
+            <div class="flex">
+              <div class="input-wrapper">
+                <label for="cDate">Data<span>(DD/MM/AAAA)</span></label>
+                <input type="date" name="tDate" id="cDate" min="2022-07-29" />
+              </div>
+    
+              <div class="input-wrapper">
+                <label for="cTimeInit">Das</label>
+                <input type="time" name="tTimeInit" id="cTimeInit" />
+              </div>
+    
+              <div class="input-wrapper">
+                <label for="cTimeFinish">Até</label>
+                <input type="time" name="tTimeFinish" id="cTimeFinish" />
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="columns">
+            <h2>Segunda mentoria</h2>
+            <div class="flex">
+              <div class="input-wrapper">
+                <label for="cData">Data<span>(DD/MM/AAAA)</span></label>
+                <input type="date" name="tData" id="cData" min="2022-07-29" />
+              </div>
+    
+              <div class="input-wrapper">
+                <label for="cHoraInit">Das</label>
+                <input type="time" name="tHoraInit" id="cHoraInit" />
+              </div>
+    
+              <div class="input-wrapper">
+                <label for="cHoraFinish">Até</label>
+                <input type="time" name="tHoraFinish" id="cHoraFinish" />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+      <footer>
+        <input
+          form="my-form" 
+          type="submit"
+          value="Salvar"
+          title="Clique para salvar."
+        />
+      </footer>
+    </div>
+
+</body>
+</html>

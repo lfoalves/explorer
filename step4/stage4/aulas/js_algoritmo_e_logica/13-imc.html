@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    let patients = [
+      {
+        name: 'Juan',
+        age: 32,
+        peso: 60,
+        altura: 175
+      },
+      {
+        name: 'Letícia',
+        age: 40,
+        peso: 58,
+        altura: 155
+      },
+      {
+        name: 'Joaquim',
+        age: 23,
+        peso: 80,
+        altura: 178
+      },
+      {
+        name: 'Renan',
+        age: 27,
+        peso: 75,
+        altura: 170
+      }
+    ];
+
+    let IMC;
+    let index = 0;
+
+    for (let patient of patients) {
+      IMC = ((patient.peso / (patient.altura ^ 2))/100).toFixed(2);
+      index++;
+      console.log(`Caro ${patient.name} o seu Índice de Massa corporal é ${IMC}`);
+      calcularIMC(IMC)
+    }
+
+    function calcularIMC(IMC) {
+      if (IMC >= 17 && IMC < 18.5) {
+        alert('MAGREZA')
+      } else if (IMC >= 18.5 && IMC <= 24.9 ) {
+        alert('peso normal')
+      } else if (IMC >= 25 && IMC <= 29.9) {
+        alert('SOBREPESO')
+      } else if (IMC >= 30 && IMC <= 34.9) {
+        alert('OBESIDADE I')
+      } else if (IMC >= 35 && IMC <= 40) {
+        alert('OBESIDADE II')
+      } else if (IMC >= 40 && IMC <= 50) {
+        alert('OBESIDADE GRAU III')
+      } else {
+        alert('Risco de morte')
+      }
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrutura de Dados</title>
+</head>
+<body>
+  <script>
+    function LuizFernando() {
+      let i = 1;
+      let products = [];
+      
+      alert('Vamos fazer compras prepare uma lista')
+
+      for (i; i <= 10; i++) {
+        let item =  window.prompt('Insira um produto na lista ' + i);
+        products.push(item);
+      }
+      document.write(products)
+    }
+
+    function MaykBrito() {
+      let items = [];
+      alert('Prepare um lista de compras');
+
+      for(let item = 0; item < 10; item++) {
+        let itemName = prompt('Insira o item' + (item + 1));
+        items[item] = itemName;
+      }
+      alert(items)
+    }
+    MaykBrito()
+  </script>
+</body>
+</html>

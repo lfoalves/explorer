@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --font-archivo: 'Archivo', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --gray-accessibility: #6C6A71;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body, input, button, select, textarea {
+  font-family: var(--font-poppins);
+}
+
+body {
+  font-size: 1.6rem;
+
+  background-color: #E5E5E5;
+}
+
+body::before {
+  content: '';
+  width: 100%;
+  height: 36.8rem;
+  background-color: #121214;
+
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.page {
+  width: 76.3rem;
+  margin: 0 auto;
+}
+
+header {
+  width: 31.9rem;
+  margin-top: 7.4rem;
+}
+
+header h1 {
+   font-family: var(--font-archivo);
+   font-weight: 700;
+   font-size: 3.6rem;
+   line-height: 4.2rem;
+   color: #fff;
+
+   margin-bottom: 2.4rem;
+}
+header p {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+
+  color: #42D3FF;
+}
+
+form {
+  background-color: #FAFAFC;
+
+  /* background-color: #979090; */
+
+  min-height: 30rem;
+  margin-top: 3.8rem;
+  border-radius: .8rem .8rem 0 0 ;
+
+  padding: 6.4rem;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset + fieldset {
+  margin-top: 4.8rem;
+}
+
+fieldset legend {
+  font-family: var(--font-archivo);
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  color: #32264D;
+
+  width: 100%;
+  padding-bottom: 1.6rem;
+  border-bottom: .1rem solid #E6E6F0;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-pass {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  border: .1rem solid #E6E6F0;
+  width: fit-content;
+  border-radius: .8rem;
+}
+
+div.input-pass input {
+  border: none;
+}
+
+.input-pass img {
+  margin: 0;
+  width: 4rem;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.input-wrapper:hover label span, .input-wrapper:hover input, .input-wrapper:hover textarea,
+.input-wrapper:hover select,
+.input-wrapper input:focus, .input-wrapper textarea:focus .input-wrapper select:focus {
+  color: var(--gray-accessibility);
+
+  transition: .2s;
+}
+
+.input-wrapper label {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  color: #4E4958;
+
+  margin-top: 2.4rem;
+  margin-bottom: .8rem;
+}
+
+.input-wrapper label span {
+  margin-left: 1.2rem;
+
+  font-size: 1.2rem;
+  line-height: 2rem;
+
+  color: #C1BCCC;
+}
+
+.input-wrapper input, .input-wrapper textarea, .input-wrapper select {
+  background-color: #FAFAFC;
+
+  border: .1rem solid #E6E6F0;
+  border-radius: .8rem;
+
+  height: 5.6rem;
+  
+  padding: 0 2.4rem;
+
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+
+  color: #C1BCCC;
+}
+
+.input-wrapper input:invalid {
+  outline: .1rem solid #FF1010;
+  animation: invalidated .5s ease-in-out;
+}
+
+.input-wrapper textarea {
+  padding: 0;
+  height: 16.8rem;
+}
+
+.input-wrapper select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+
+  background-image: url('../assets/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  transition: all .3s
+}
+
+.input-wrapper select:focus {
+  background-image: url('../assets/arrow-up.svg');
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 2.4rem;
+
+  gap: 1.6rem;
+}
+
+.checkbox-wrapper label {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+
+  color: #4E4958;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: none;
+  border: .1rem solid #E6E6F0;
+  border-radius: .8rem;
+  
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked {
+  background-image: url('../assets//check-blue.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.col-3 {
+  display: flex;
+  gap: 2rem;
+}
+
+.col-3 > div:nth-child(1) {
+  width: 100%;
+}
+
+footer {
+  background-color: #F0F0F4;
+  height: 13.6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 9.1rem;
+
+  border-top: .1rem solid #D6D6D6;
+
+  border-radius: 0 0 .8rem .8rem;
+
+}
+
+footer input {
+  background-color: #04D361;
+  width: 60.8rem;
+  height: 5.6rem;
+
+  color: #FFF;
+  font-size: 1.6rem;
+  font-family: var(--font-archivo);
+  line-height: 2.6rem;
+
+  border: none;
+  border-radius: .8rem;
+
+  cursor: pointer;
+}
+
+footer input:hover {
+  filter: brightness(.9);
+}
+
+@keyframes invalidated {
+  0%,20%,30%,50%,70%,90% {
+    transform: rotate(-1deg);
+  }
+  10%,40%,60%,80%, 100% {
+    transform: rotate(1deg);
+  } 
+}

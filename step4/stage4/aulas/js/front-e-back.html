@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculadora</title>
+    <style>
+      #form {
+        display: none;
+      }
+      #form.active {
+        display: block;
+      }
+
+      label {
+        display: block;
+      }
+
+      input[type="radio"]:checked {
+        width: 1rem;
+        height: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <button id="oper">Fazer operação</button>
+
+    <div id="form">
+      <form>
+        <fieldset>
+          <legend>Operação</legend>
+          <label for="cSoma">
+            Soma:<input
+              value="soma"
+              type="radio"
+              name="tOper"
+              id="cSoma"
+            />
+          </label>
+          <label for="cSubtracao">
+            Subtração:<input
+              value="subtracao"
+              type="radio"
+              name="tOper"
+              id="cSubtracao"
+            />
+          </label>
+          <label for="cDivisao">
+            Divisão:<input
+              value="divisao"
+              type="radio"
+              name="tOper"
+              id="cDivisao"
+            />
+          </label>
+          <label for="cMultiplicacao">
+            Multiplicação:<input
+              value="multiplicacao"
+              type="radio"
+              name="tOper"
+              id="cMultiplicacao"
+            />
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Dados e submissão</legend>
+          <input name="tNum1" id="cNum1" type="number" placeholder="insira um número" />
+          <input name="tNum2" id="cNum2" type="number" placeholder="insira outro número" />
+          <input type="submit" value="Calcular" />
+        </fieldset>
+      </form>
+
+      <div class="result">
+        <p id="result">Insira valores para a operação</p>
+      </div>
+    </div>
+
+    <script>
+
+      oper.onclick = () => {
+        form.classList.add("active");
+        oper.style.display = "none";
+      };
+      
+
+      const buttonCalcular = document.querySelector("input[type='submit']");
+      console.log(buttonCalcular);
+      buttonCalcular.onclick = (e) => {
+        e.preventDefault();
+        
+        let option = document.querySelector("input[name='tOper']:checked").value;
+        let numero1 = Number(document.querySelector("input[name='tNum1']").value);        
+        let numero2 = Number(document.querySelector("input[name='tNum2']").value);
+
+        if ((!option || !numero1 || !numero2) || (option == null || numero1 == null || numero2 == null)) {
+          alert('Insira dados');
+          return window.location.reload();
+        }
+
+        switch (option) {
+          case "":
+            alert("Preencha os campos");
+            break;
+
+          case "soma":
+            console.log(numero1 + numero2);
+            result.innerText = `O resultado da Adição entre ${numero1} e ${numero2} é: ${numero1 + numero2}`;
+            break;
+
+          case "subtracao":
+            console.log(numero1 - numero2);
+            result.innerText = `O resultado da Subtração entre ${numero1} e ${numero2} é: ${numero1 - numero2}`;
+            break;
+
+          case "divisao":
+            console.log(numero1 / numero2);
+            result.innerText = `O resultado da Divisão entre ${numero1} e ${numero2} é: ${numero1 / numero2}`;
+            break;
+
+          case "multiplicacao":
+            console.log(numero1 * numero2);
+            result.innerText = `O resultado da Multiplicação entre ${numero1} e ${numero2} é: ${numero1 * numero2}`;
+            break;
+
+          default:
+            alert("Não foi possível fazer a operação");
+        }
+      };
+
+    </script>
+  </body>
+</html>

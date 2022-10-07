@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista System</title>
+</head>
+<body>
+  <script>
+    let option = 0;
+    let list = [];
+
+    while (option != 3) {
+
+      option = Number(prompt(`
+        Olá usuário! Digite o número da opção desejada
+
+        1. Cadastrar um item na lista
+        2. Mostrar itens cadastrados
+        3. Sair do programa
+      `));
+      
+        switch (option) {
+          case 1:
+            let item = prompt('Insira um item');
+            list.push(item);
+            break;
+
+          case 2:
+            if (list.length == 0) {
+              alert('Lista vazia');
+            } else {
+              alert('Lista de itens: ' + list);
+            }
+            break;
+          
+          case 3:
+            alert('Você finalizou a operação!');
+            break;
+
+          default:
+            alert('Não foi possível concluir a operação. Tente novamente');
+        }
+    }
+  </script>
+  
+</body>
+</html>

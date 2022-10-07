@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrutura de dados com objetos</title>
+</head>
+<body>
+  <script>
+    const patients = [
+      {
+        name: 'Luiz',
+        age: 24,
+        peso: 75,
+        altura: 1.75
+      },
+      {
+        name: 'Chica',
+        age: 25,
+        peso: 60,
+        altura: 1.50
+      },
+      {
+        name: 'Jão',
+        age: 50,
+        peso: 65,
+        altura: 1.65
+      },
+      {
+        name: 'Miraya',
+        age: 50,
+        peso: 65,
+        altura: 1.65
+      }
+    ];
+
+    let patientsNames = [];
+    
+    for(let index = 0; index < patients.length; index++) {
+      patientsNames[index] = patients[index].name;
+    }
+
+    for(let patient of patients) {
+      console.log(patient.name)
+      alert(patient.name + ' tem ' + patient.age + ' anos, pesa ' + patient.peso + ' e mede ' + patient.altura + ' metros');
+    }
+
+    console.log(patientsNames)
+  </script>
+</body>
+</html>

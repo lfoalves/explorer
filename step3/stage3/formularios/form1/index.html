@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="https://img.icons8.com/color/344/star-trek-deep-space-nine.png" type="image/x-icon">
+  
+  <title>Crei seu evento</title>
+  <!-- style -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+  <!-- scripts -->
+  <script src="./scripts/script.js" defer></script>
+</head>
+<body>
+
+  <div class="page">
+    <header>
+      <h1>Crie e compartilhe seu evento.</h1>
+      <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
+    </header>
+  
+    <form id="my-form">
+      <fieldset>
+        <legend>Informações do Evento</legend>
+
+        <div class="input-wrapper">
+          <label for="cEvent-title">Título do evento<span>(mínimo 8 caracteres)</span></label>
+          <input type="text" name="tEvent-title" id="cEvent-title" minlength="8" maxlength="255"/>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="cEvent-link">Link do evento<span>(começe com https://)</span></label>
+          <input type="url" name="tEvent-url" id="cEvent-link" pattern="https?://.+" title="Inclua https://"/>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="cEvent-whatsapp">Whatsapp para contao<span>(somente números)</span></label>
+          <input type="number" name="tEvent-whatsapp" id="cEvent-whatsapp" maxlength="15" pattern="[0-9]"/>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="cEvent-info">Informações extras</label>
+          <textarea name="tEvent-info" id="cEvent-info"></textarea>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="cEvent-category">Categoria</label>
+          <select name="tEvent-category" id="cEvent-category">
+            <option value="live">Ao Vivo</option>
+            <option value="pod cast">Podcast</option>
+            <option value="mentorship">Mentoria</option>
+            <option value="leadership">Liderança</option>
+          </select>
+        </div>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Privacidade</legend>
+
+        <div class="input-wrapper">
+          <label for="cEvent-email">E-mail do administrador<span>(digite um e-mail válido)</span></label>
+          <input type="email" name="tEvent-email" id="cEvent-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="example: usuario@email.com" />
+        </div>
+
+        <div class="input-wrapper">
+          <label for="cEvent-pass">Senha de acesso para os participante<span>(mínimo 8 e máximo 30 caracteres)</span></label>
+          <div class="input-pass">
+            <input type="password" name="tEvent-pass" id="cEvent-pass" minlength='8' maxlength="30" />
+            <img id="eye" src="./assets/eye-emoji.png" alt="ícone de olho" />
+          </div>
+        </div>
+
+        <div class="checkbox-wrapper">
+          <input type="checkbox" name="tEvent-private" id="cEvent-private" title="Evento privado?" />
+          <label for="cEvent-private">Evento privado</label>
+        </div>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Data e hora</legend>
+        <div class="col-3">
+
+          <div class="input-wrapper">
+            <label for="cEvent-date">Data</label>
+            <input type="date" name="tEvent-date" id="cEvent-date" pattern="[A-Za-z0-9]"/>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="cEvent-begin">Das</label>
+            <input type="time" name="tEvent-begin" id="cEvent-begin" pattern="[A-Za-z0-9]"/>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="cEvent-end">Até</label>
+            <input type="time" name="tEvent-end" id="cEvent-end" pattern="[A-Za-z0-9]"/>
+          </div>
+
+        </div>
+      </fieldset>
+
+    </form>
+
+    <footer>
+      <input
+        form="my-form" 
+        type="submit"
+        value="Salvar evento"
+        title="Clique para salvar evento" />
+    </footer>
+  
+  </div>
+  
+</body>
+</html>

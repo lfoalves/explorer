@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentoria</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="https://img.icons8.com/flat-round/2x/bookmark-ribbon.png" type="image/x-icon">
+  <!-- style -->
+  <link rel="stylesheet" href="./styles/style.css" />
+  <!-- fonts staatliches -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <!-- fonts poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="form">
+    <header>
+      <h1>Avalie a sua mentoria</h1>
+      <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+      <img src="./assets/stars-cloud.svg" alt="ícone de nuvem de estrelas">
+    </header>
+
+    <legend id="top-legend" fieldset="personal">Informações pessoais</legend>
+    <form id="my-form">
+      <fieldset id="personal">
+
+        <div class="flex">
+          <div class="input-wrapper">
+            <label for="cName">Nome</label>
+            <input type="text" name="Sobrenomee" id="Sobrenomee" />
+          </div>
+  
+          <div class="input-wrapper">
+            <label for="cSobrenome">Sobrenome</label>
+            <input type="text" name="tSobrenome" id="cSobrenome" />
+          </div>
+        </div>
+
+        <div class="input-wrapper email">
+          <label for="cEmail">Email<span>(digite um email válido)</span></label>
+          <input type="email" name="tEmail" id="cEmail" />
+        </div>
+      </fieldset>
+
+      <fieldset  class="mentor">
+        <legend>Informações do mentor</legend>
+        <div class="input-wrapper">
+          <label for="cMetor">Selecione quem foi o seu mentor</label>
+          <select name="tMetor" id="cMetor">
+            <option value="Diego Fernandes">Diego Fernandes</option>
+            <option value="Mayk Brito">Mayk Brito</option>
+            <option value="Jakeliny Gracielly">Jakeliny Gracielly</option>
+            <option value="Rodrigo Gonçalves">Rodrigo Gonçalves</option>
+          </select>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="cFeedMetor">Feedback sobre seu mentor</label>
+          <textarea name="tFeedMetor" id="cFeedMetor"></textarea>
+        </div>
+
+        <div class="input-wrapper checkbox">
+          <input type="checkbox" name="tCheckMetor" id="cCheckMetor" title="Dúvidas?"/>
+          <label for="cCheckMetor">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+        </div>
+      </fieldset>
+
+      <fieldset id="next-mentorship">
+        <legend>Agendando próxima mentoria</legend>
+
+          <div class="flex">
+
+            <div class="input-wrapper">
+              <label for="cData">Data<span>(DD/MM/AAAA)</span></label>
+              <input type="date" name="tData" id="cData" />
+            </div>
+  
+            <div class="input-wrapper">
+              <label for="cDateInit">Das</label>
+              <input type="time" name="tDateInit" id="cDateInit" />
+            </div>
+  
+            <div class="input-wrapper">
+              <label for="cDateFinish">Até</label>
+              <input type="time" name="tDateFinish" id="cDateFinish" />
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <div class="input-wrapper submit">
+          <input form="my-form" type="submit" name="tSubmit" id="cSubmit" value="Salvar" title="Clique para salvar"/>
+        </div>
+    </form>
+  </div>
+  
+</body>
+</html>

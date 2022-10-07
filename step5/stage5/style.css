@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  list-style: none;
+
+  font-family: sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+
+html, body, .app, .page {
+  background-color: #f7df1d;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
+.page {
+  max-width: 102.4rem;
+  height: 100%;
+  margin: 0 auto;
+
+  /* background-image: url('https://cdn.metring.com.br/categories/3/thumbnail.jpg'); */
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  background-color: transparent;
+  padding: 1rem;
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 4rem;
+}
+
+header span {
+  font-weight: bolder;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 2rem
+}
+
+ul li a {
+  display: inline-block;
+  width: 25rem;
+  height: 20rem;
+  background-color: blueviolet;
+  border-radius: 1rem;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  transition: all .4s;
+}
+ul li a:hover {
+  transform: scale(1.3);
+  z-index: 5;
+}
+
+ul li:nth-child(1) a {
+  background-image: url('./assets/memory-game.png');
+  background-position: center center;
+}
+ul li:nth-child(2) a {
+  background-image: url('./assets/sidebar.png');
+}
+ul li:nth-child(3) a {
+  background-image: url('./assets/pomofocus.png');
+}
+ul li:nth-child(4) a {
+  background-image: url('./assets/jogo-da-adivinhacao.png');
+  background-position: center center;
+}
+ul li:nth-child(5) a {
+  background-image: url('./assets/focus-timer-2.png');
+  background-position: 50% 50%;
+}
+ul li:nth-child(6) a {
+  background-image: url('./assets/imc-es6.png');
+  background-position: 50% 50%;
+}
+
+ul li p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+
+@media(max-width: 599px) {
+  .page {
+    width: 100%;
+    height: 100%;
+
+    padding: 0.5rem;
+
+    margin-top: 5rem;
+    background-image: none;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+}
+
+@media((min-width: 600px) and (max-width: 1024px)) {
+  .page {
+    width: 100%;
+    height: 100%;
+  }
+  ul {
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+}

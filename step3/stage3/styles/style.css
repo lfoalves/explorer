@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --font-family: 'Comfortaa', cursive;
+}
+
+html, body, .app {
+  background-color: azure;
+  background-color: #190e20;
+
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+body::-webkit-scrollbar {width: 4px; }
+body::-webkit-scrollbar-track {background: #321c41; }
+body::-webkit-scrollbar-thumb {background-color: #a17d05; border-radius: 20px; border: 0px solid orange; } 
+
+.app {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 136.6rem;
+  margin-inline: auto;
+}
+
+h1 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: aliceblue;
+}
+h1 span {
+  color: blueviolet;
+  font-size: 2.5rem;
+}
+
+.forms {
+  width: 100%;
+
+  padding: 5rem;
+}
+
+ul {
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+
+  margin: 1rem;
+}
+
+li a {
+  display: inline-block;
+  width: 35rem;
+  height: 20rem;
+  background-color: rebeccapurple;
+  border-radius: 1rem;
+
+  font-family: var(--font-family);
+
+  transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+li a {
+  background-size: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+li a:hover {
+  transform: scale(1.5);
+  filter: brightness(1.1);
+  box-shadow:
+    0 .2rem 1rem rgba(62, 9, 66, 0.5),
+    0 .4rem 1.5rem rgba(109, 16, 116, 0.5),
+    0 .8rem 8rem rgba(151, 26, 160, 0.5);
+}
+li a:focus {
+  transform: scale(1.5);
+  filter: brightness(1.1);
+  box-shadow:
+    0 .2rem 1rem rgba(62, 9, 66, 0.5),
+    0 .4rem 1.5rem rgba(109, 16, 116, 0.5),
+    0 .8rem 8rem rgba(151, 26, 160, 0.5);
+    outline: 2px solid rgba(151, 26, 160, 0.5);
+}
+
+/* .links-forms li a {
+  display: inline-block;
+  width: 35rem;
+  height: 20rem;
+  background-color: rebeccapurple;
+  border-radius: 1rem;
+
+  font-family: Comfortaa,cursive;
+
+  transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1);
+} */
+/* .links-forms li a {
+  background-size: 100%;
+  background-repeat: no-repeat;
+} */
+.links-forms #form1 {
+  background-image: url(../assets/form1.png);
+}
+.links-forms #form2 {
+  background-image: url(../assets/form2.png);
+}
+.links-forms #form3 {
+  background-image: url(../assets/form3.png);
+}
+/* .links-forms li a:hover {
+  transform: scale(1.5);
+  filter: brightness(1.1);
+  box-shadow:
+    0 .2rem 1rem rgba(62, 9, 66, 0.5),
+    0 .4rem 1.5rem rgba(109, 16, 116, 0.5),
+    0 .8rem 8rem rgba(151, 26, 160, 0.5);
+}
+.links-forms li a:focus {
+  transform: scale(1.5);
+  filter: brightness(1.1);
+  box-shadow:
+    0 .2rem 1rem rgba(62, 9, 66, 0.5),
+    0 .4rem 1.5rem rgba(109, 16, 116, 0.5),
+    0 .8rem 8rem rgba(151, 26, 160, 0.5);
+    outline: 2px solid rgba(151, 26, 160, 0.5);
+} */
+
+
+
+/* Introdução à Responsividade ----------------------------->>>>>>>>>>>>>>>>>>>>>>> */
+.responsividade {
+  width: 100%;
+  padding: 5rem;
+}
+.responsividade ul {
+  text-align: center;
+}
+.responsividade ul li a {
+  background-image: url(../assets/responsividade4.png);
+}
+
+
+
+/* Layout Grid */
+.grid {
+  width: 100%;
+  padding: 5rem;
+}
+.grid ul li a {
+  background-image: url(../assets/layout-grid.png);
+}
+
+
+
+/* Space Cream ------------------------------->>>>>>>>>>>>>>>>>>>>>>> */
+.space-cream {
+  width: 100%;
+  padding: 5rem;
+}
+.space-cream ul li a {
+  background-image: url(../assets/layout_space-cream_mobile.png);
+}
+
+
+
+/* Redes Sociais ----------------------------->>>>>>>>>>>>>>>>>>>>>>> */
+.socials {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 2rem;
+
+  transition: all .3s;
+}
+.socials img {
+  width: 4rem;
+  transition: all .3s;
+
+}
+.socials img:hover {
+  transform: translateY(-.7rem);
+  filter: drop-shadow(.1rem .1rem 1rem #FFF);
+}
+
+
+
+footer {
+  font-family: var(--font-family);
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+  padding: 5rem;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer a:hover {
+  filter: drop-shadow(.1rem .1rem 1rem #FFF);
+}

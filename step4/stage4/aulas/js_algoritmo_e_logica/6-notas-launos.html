@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Média alunos</title>
+</head>
+<body>
+  <script>
+    alert('Bem vindo ao sitemas de notas');
+    let studant = prompt('Qual o nome do(a) aluno(a)?');
+    let n1 = prompt('Qual a nota da primeira prova?');
+    let n2 = prompt('Qual a nota da primeira prova?');
+    let n3 = prompt('Qual a nota da primeira prova?');
+
+    let average = (Number(n1) + Number(n2) + Number(n3)) / 3;
+    let result = average > 6;
+    average = average.toFixed(2)
+    if (result ) {
+      alert('Parabéns ' + studant + ' sua média foi ' + average);
+    } else {
+      alert('Em Recuperação. ' + studant + ' sua média foi ' + average);
+    }
+  </script>
+</body>
+</html>
