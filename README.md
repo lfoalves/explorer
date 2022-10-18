@@ -145,3 +145,13 @@ Code: [GitFav](https://github.com/lfoalves/explorer/tree/master/step6/stage6/des
 # STAGE 07
 
 Code: [GIT PUSH](https://github.com/lfoalves/explorer)
+
+<br>
+
+# STAGE 08
+
+Code: [Backend Aula](https://github.com/lfoalves/explorer/tree/master/step8/stage8/aulas/backend_knex)
+
+Code: [Desafio Backend KNEX](https://github.com/lfoalves/explorer/tree/master/step8/stage8/desafios/desafio_backend_node_knex)
+
+Code: [Desafio Backend SQL](https://github.com/lfoalves/explorer/tree/master/step8/stage8/desafios/desafio_backend_node_sql)
